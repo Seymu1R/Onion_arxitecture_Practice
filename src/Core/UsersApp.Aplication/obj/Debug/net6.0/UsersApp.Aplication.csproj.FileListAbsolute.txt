@@ -1,0 +1,15 @@
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\bin\Debug\net6.0\UsersApp.Aplication.deps.json
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\bin\Debug\net6.0\UsersApp.Aplication.dll
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\bin\Debug\net6.0\UsersApp.Aplication.pdb
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\bin\Debug\net6.0\UsersApp.Domain.dll
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\bin\Debug\net6.0\UsersApp.Domain.pdb
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\UsersApp.Aplication.csproj.AssemblyReference.cache
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\UsersApp.Aplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\UsersApp.Aplication.AssemblyInfoInputs.cache
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\UsersApp.Aplication.AssemblyInfo.cs
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\UsersApp.Aplication.csproj.CoreCompileInputs.cache
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\UsersApp.Aplication.csproj.CopyComplete
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\UsersApp.Aplication.dll
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\refint\UsersApp.Aplication.dll
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\UsersApp.Aplication.pdb
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\Core\UsersApp.Aplication\obj\Debug\net6.0\ref\UsersApp.Aplication.dll
