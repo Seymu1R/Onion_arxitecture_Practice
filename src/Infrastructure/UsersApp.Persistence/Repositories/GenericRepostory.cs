@@ -11,10 +11,10 @@ using System.Collections;
 
 namespace UsersApp.Persistence.Repositories
 {
-    public class GenericRepostory<T> : IGenericRepository<T> where T : BaseClass
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseClass
     {
         private ApplicationDBContext _context;
-        public GenericRepostory(ApplicationDBContext context)
+        public GenericRepository(ApplicationDBContext context)
         {
             _context = context;
         }
@@ -50,10 +50,11 @@ namespace UsersApp.Persistence.Repositories
             return item;
         }
 
-        public async Task<bool> UpdateItemAsync(int id)
+        public async Task<T> UpdateItemAsync(int id)
         {
            T item = await _context.Set<T>().FindAsync(id);
-           return _context.SaveChanges() >= 0 ? true : false;
+           
+            return item;
         }
     }
 }

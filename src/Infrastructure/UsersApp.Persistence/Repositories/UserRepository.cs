@@ -10,7 +10,7 @@ using UsersApp.Domain.Entities;
 
 namespace UsersApp.Persistence.Repositories
 {
-    public class UserRepository : GenericRepostory<User>
+    public class UserRepository : GenericRepository<User>,IUser
     {
         public UserRepository(ApplicationDBContext context) : base(context)
         {

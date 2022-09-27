@@ -15,6 +15,6 @@ namespace UsersApp.Aplication.Interfaces
         Task<T> GetItembyIdAsync(int id);
         Task<bool> DeleteItembyIDAsync(int id);
         Task<bool> CreateItemAsync(T item);
-        Task<bool> UpdateItemAsync(int id );
+        Task<T> UpdateItemAsync(int id );
     }
 }

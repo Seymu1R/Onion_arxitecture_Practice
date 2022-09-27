@@ -9,7 +9,7 @@ using UsersApp.Domain.Entities;
 
 namespace UsersApp.Persistence.Repositories
 {
-    public class ContractRepository : GenericRepostory<ConTract>
+    public class ContractRepository : GenericRepository<ConTract>,IContract
     {
         public ContractRepository(ApplicationDBContext context) : base(context)
         {
