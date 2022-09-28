@@ -10,6 +10,7 @@ namespace UsersApp.Aplication.Interfaces
 {
     public interface IContract:IGenericRepository<ConTract>
     {
+        public Task<List<ConTract>> GetAllContractByid(int id);
 
     }
 }

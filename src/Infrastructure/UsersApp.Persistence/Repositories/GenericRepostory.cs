@@ -21,20 +21,20 @@ namespace UsersApp.Persistence.Repositories
         public async Task<bool> CreateItemAsync(T item)
         {
             await _context.AddAsync(item);
-            return _context.SaveChanges() >= 0 ? true : false;
+            return await SuccessingAsync();
         }
 
         public async Task<bool> DeleteItembyIDAsync(int id)
         {
             T item = await _context.Set<T>().FindAsync(id);
             if(item is null) return false;
-            _context.Set<T>().Remove(item);           
-            return  _context.SaveChanges() >= 0 ? true : false;
+            _context.Set<T>().Remove(item);            
+            return await SuccessingAsync();
         }
 
         public async Task<IEnumerable<T>> GetActiceItemAsync()
         {
-            List<T> items = await _context.Set<T>().Where(x => x.State==1).ToListAsync();
+            List<T> items = await _context.Set<T>().Where(x => x.State == 1).ToListAsync();
             return items;
         }
 
@@ -48,12 +48,18 @@ namespace UsersApp.Persistence.Repositories
         {
             T item = await _context.Set<T>().FindAsync(id);
             return item;
+        }      
+
+        public async Task<bool> SuccessingAsync()
+        {
+            bool Success= await  _context.SaveChangesAsync() >= 0 ? true : false;
+            return Success;
         }
 
-        public async Task<T> UpdateItemAsync(int id)
+        public async Task<T> UpdateItemAsync(int id )
         {
            T item = await _context.Set<T>().FindAsync(id);
-           
+            
             return item;
         }
     }

@@ -11,9 +11,14 @@ using UsersApp.Domain.Entities;
 namespace UsersApp.Persistence.Repositories
 {
     public class UserRepository : GenericRepository<User>,IUser
-    {
-        public UserRepository(ApplicationDBContext context) : base(context)
+    {        
+        private ApplicationDBContext _context1;
+
+        public UserRepository(ApplicationDBContext context, ApplicationDBContext context1) : base(context)
         {
+            _context1 = context1;
         }
+       
+        
     }
 }
