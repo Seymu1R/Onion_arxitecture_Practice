@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UsersApp.Domain.Entities
 {
-    public class User:BaseClass
+    public class User : BaseClass
     {
         public string UserName { get; set; }
         public string Name { get; set; }
@@ -15,9 +15,5 @@ namespace UsersApp.Domain.Entities
         public int Age { get; set; }
         List<ConTract> Contracts { get; set; }
 
-        public static implicit operator User(List<User> v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

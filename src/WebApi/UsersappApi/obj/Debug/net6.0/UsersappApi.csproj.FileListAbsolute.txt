@@ -65,3 +65,8 @@ C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\WebApi\UsersappApi\obj\Deb
 C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\WebApi\UsersappApi\obj\Debug\net6.0\ref\UsersappApi.dll
 C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\WebApi\UsersappApi\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\WebApi\UsersappApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\WebApi\UsersappApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\WebApi\UsersappApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\WebApi\UsersappApi\bin\Debug\net6.0\MediatR.dll
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\WebApi\UsersappApi\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Seymur\Desktop\Practice_API\Practise_Api\src\WebApi\UsersappApi\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

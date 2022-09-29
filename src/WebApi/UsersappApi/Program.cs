@@ -1,9 +1,11 @@
+using UsersApp.Aplication;
 using UsersApp.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddPersistanceVoid(builder.Configuration);
+builder.Services.AddApplicationRegistration();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
