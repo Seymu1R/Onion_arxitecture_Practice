@@ -17,6 +17,6 @@ namespace UsersApp.Aplication.Interfaces
         Task<bool> CreateItemAsync(T item);
         Task<T> UpdateItemAsync(int id  );
         Task<bool> SuccessingAsync();
-        
+       
     }
 }

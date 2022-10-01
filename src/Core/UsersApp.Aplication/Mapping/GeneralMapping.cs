@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UsersApp.Aplication.Dtos;
+using UsersApp.Aplication.Features.Commads;
+using UsersApp.Aplication.Features.Queries.GetUsers.GetProductById;
+using UsersApp.Domain.Entities;
 
 namespace UsersApp.Aplication.Mapping
 {
@@ -11,7 +10,11 @@ namespace UsersApp.Aplication.Mapping
     {
         public GeneralMapping()
         {
-            CreateMap<Domain.Entities.User, Dtos.UserViewDto>()
+            CreateMap<User, UserViewDto>()
+                .ReverseMap();
+            CreateMap<User, CreateUserComand>()
+                .ReverseMap();
+            CreateMap<User, GetUserByIdQueryViewDto>()
                 .ReverseMap();
         }
     }

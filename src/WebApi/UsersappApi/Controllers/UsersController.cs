@@ -2,10 +2,13 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using UsersApp.Aplication.Features.Commads;
 using UsersApp.Aplication.Features.Queries.GetUsers;
+using UsersApp.Aplication.Features.Queries.GetUsers.GetProductById;
 using UsersApp.Aplication.Interfaces;
 using UsersApp.Domain.Entities;
 using UsersApp.Persistence.Repositories;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace UsersappApi.Controllers
 {
@@ -27,21 +30,19 @@ namespace UsersappApi.Controllers
             
             return Ok(await _mediator.Send(query));
         }
-        //[HttpGet]
-        //[Route("GetUser/{id:int}")]
-        //public async Task<ActionResult<User>> GetUser(int id)
-        //{
-        //    var user = await _userRepository.GetItembyIdAsync(id);
-        //    return Ok(user);
-        //}
-        //[HttpPost]
-        //[Route("AddUser")]
-        //public async Task<ActionResult> CreateUser([FromBody] User user)
-        //{
-        //    bool Success = await _userRepository.CreateItemAsync(user);
-        //    if (!Success) return BadRequest();
-        //    return Ok(Success);
-        //}
+        [HttpGet]
+        [Route("GetUser/{id:int}")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+            var query = new GetUserByIdQuery() { Id = id };
+            return Ok(await _mediator.Send(query)); 
+        }
+        [HttpPost]
+        [Route("AddUser")]
+        public async Task<ActionResult> CreateUser(CreateUserComand comand)
+        {
+            return Ok(await _mediator.Send(comand));
+        }
         //[HttpDelete]
         //[Route("DeleteUser/{id:int}")]
         //public async Task<ActionResult> DeleteUser([FromRoute] int id)
@@ -64,6 +65,6 @@ namespace UsersappApi.Controllers
         //    await _userRepository.SuccessingAsync();
         //    return Ok(userf);
         //}
-       
+
     }
 }
