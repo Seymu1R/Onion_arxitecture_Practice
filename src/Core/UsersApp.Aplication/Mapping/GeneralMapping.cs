@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using UsersApp.Aplication.Dtos;
 using UsersApp.Aplication.Features.Commads;
+using UsersApp.Aplication.Features.Commads.UpdateUserComand;
 using UsersApp.Aplication.Features.Queries.GetUsers.GetProductById;
 using UsersApp.Domain.Entities;
 
@@ -15,6 +16,8 @@ namespace UsersApp.Aplication.Mapping
             CreateMap<User, CreateUserComand>()
                 .ReverseMap();
             CreateMap<User, GetUserByIdQueryViewDto>()
+                .ReverseMap();
+            CreateMap<User, UpdateUserComand>()
                 .ReverseMap();
         }
     }

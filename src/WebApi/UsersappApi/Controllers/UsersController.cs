@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using UsersApp.Aplication.Features.Commads;
+using UsersApp.Aplication.Features.Commads.DeleteUserComand;
+using UsersApp.Aplication.Features.Commads.UpdateUserComand;
 using UsersApp.Aplication.Features.Queries.GetUsers;
 using UsersApp.Aplication.Features.Queries.GetUsers.GetProductById;
 using UsersApp.Aplication.Interfaces;
@@ -43,28 +45,21 @@ namespace UsersappApi.Controllers
         {
             return Ok(await _mediator.Send(comand));
         }
-        //[HttpDelete]
-        //[Route("DeleteUser/{id:int}")]
-        //public async Task<ActionResult> DeleteUser([FromRoute] int id)
-        //{
-        //    bool Success = await _userRepository.DeleteItembyIDAsync(id);
-        //    if (!Success) return BadRequest();
-        //    return Ok(Success);
-        //}
-        //[HttpPut]
-        //[Route("UpdataUser/{id:int}")]
-        //public async Task<ActionResult<User>> UpdateUser([FromRoute] int id, User user)
-        //{
-        //    User userf = await _userRepository.UpdateItemAsync(id);
-        //    if (userf is null) return NotFound();
-        //    userf.UserName = user.UserName;
-        //    userf.SurName = user.SurName;
-        //    userf.FatherName = user.FatherName;
-        //    userf.Name = user.Name;
-        //    userf.Age = user.Age;
-        //    await _userRepository.SuccessingAsync();
-        //    return Ok(userf);
-        //}
+        [HttpDelete]
+        [Route("DeleteUser/{id:int}")]
+        public async Task<ActionResult> DeleteUser([FromRoute] int id)
+        {
+            var comand = new DeleteUserComand { Id = id };            
+            return Ok(await _mediator.Send(comand));
+        }
+        [HttpPut]
+        [Route("UpdataUser/{id:int}")]
+        public async Task<ActionResult<User>> UpdateUser([FromRoute] int id, UpdateUserComand comand)
+        {      
+            var comand = new UpdateUserComand {Id=id };
+            if (comand is null) return NotFound();
+            
+        }
 
     }
 }

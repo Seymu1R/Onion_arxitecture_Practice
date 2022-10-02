@@ -14,10 +14,10 @@ namespace UsersApp.Aplication.Features.Queries.GetUsers.GetProductById
 {
     public class GetUserByIdHandler : IRequestHandler<GetUserByIdQuery, ServiceResponse<GetUserByIdQueryViewDto>>
     {
-         IGenericRepository<User> _userrepos;
+        private IUser _userrepos;
         private IMapper _mapper;
 
-        public GetUserByIdHandler(IGenericRepository<User> userrepos, IMapper mapper)
+        public GetUserByIdHandler(IUser userrepos, IMapper mapper)
         {
             _userrepos = userrepos;
             _mapper = mapper;
