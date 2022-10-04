@@ -11,7 +11,7 @@ using UsersApp.Domain.Entities;
 
 namespace UsersApp.Aplication.Features.Commads.UpdateUserComand
 {
-    public class UpdateUserComandHandler : IRequestHandler<UpdateUserComand, ServiceResponse<UpdateUserComandDto>>
+    public class UpdateUserComandHandler : IRequestHandler<UpdateUserComand, ServiceResponse<bool>>
     {
         private IMapper _mapper;
         private IUser _userrepository;
@@ -21,11 +21,19 @@ namespace UsersApp.Aplication.Features.Commads.UpdateUserComand
             _mapper = mapper;
             _userrepository = userrepository;
         }
-        public async Task<ServiceResponse<UpdateUserComandDto>> Handle(UpdateUserComand request, CancellationToken cancellationToken)
-        {     
-            var userf = _userrepository.UpdateItemAsync(request.Id);
-            var user = _mapper.Map<User>(userf);
-            return await new ServiceResponse<UpdateUserComandDto>(user);
+        public async Task<ServiceResponse<bool>> Handle(UpdateUserComand request, CancellationToken cancellationToken)
+        {
+            var requestmap = _mapper.Map<User>(request);   
+            var userf = await _userrepository.UpdateItemAsync(request.Id);
+            userf.Age = requestmap.Age;
+            userf.UserName = requestmap.UserName;
+            userf.FatherName = requestmap.FatherName;
+            userf.Name = requestmap.Name;
+            userf.SurName=requestmap.SurName;
+            bool sucess=  await  _userrepository.SuccessingAsync();
+            if (!sucess) return new ServiceResponse<bool>(!sucess);
+            return new ServiceResponse<bool>(sucess);
+
         }
     }
 }

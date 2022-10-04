@@ -9,7 +9,7 @@ using UsersApp.Domain.Entities;
 
 namespace UsersApp.Aplication.Features.Commads.UpdateUserComand
 {
-    public class UpdateUserComand:IRequest<ServiceResponse<UpdateUserComandDto>>
+    public class UpdateUserComand:IRequest<ServiceResponse<bool>>
     {
         public int Id { get; set; }
         public string UserName { get; set; }

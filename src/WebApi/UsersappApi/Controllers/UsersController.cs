@@ -54,11 +54,12 @@ namespace UsersappApi.Controllers
         }
         [HttpPut]
         [Route("UpdataUser/{id:int}")]
-        public async Task<ActionResult<User>> UpdateUser([FromRoute] int id, UpdateUserComand comand)
-        {      
-            var comand = new UpdateUserComand {Id=id };
-            if (comand is null) return NotFound();
+        public async Task<ActionResult<bool>> UpdateUser([FromRoute] int id, UpdateUserComand comand)
+        {
+            comand.Id = id;
             
+            return Ok(await _mediator.Send(comand));
+
         }
 
     }
