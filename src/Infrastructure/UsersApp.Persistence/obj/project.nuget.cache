@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "iolJ1Q6j0gdjIDXIAgCUrQUNZX2Eqce5EjQoSTKNkt3vJRqFFB7H2uXmPy598xUvO4jk4kmSJHQQaEOcckMHtg==",
+  "dgSpecHash": "JWqe9UMpKxAUfbXdK6xAynwWYizijPOQeke7W0sK9v/Jw9aAEZDBVXSfhNKWUI66+OumFUEQn9R+idwVB2V1mA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Seymur\\Desktop\\Practice_API\\Practise_Api\\src\\Infrastructure\\UsersApp.Persistence\\UsersApp.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Seymur\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Seymur\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Seymur\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\Seymur\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\Seymur\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\Seymur\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Seymur\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\Seymur\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
